@@ -50,7 +50,7 @@ Once your configuration is set, use the following commands to manage your projec
 
 1.  **Clone this specific branch**:
     ```bash
-    git clone -b feature/full-stack-integration [https://github.com/Maanaaa/hello-docker-web.git](https://github.com/Maanaaa/hello-docker-web.git) .
+    git clone -b feature/full-stack [https://github.com/Maanaaa/hello-docker-web.git](https://github.com/Maanaaa/hello-docker-web.git) .
     ```
 2.  **Prerequisites**: Ensure **Docker** is installed and running.
 3.  **Customization**: Edit the `.env` file to set your preferred ports, paths, and database credentials.
