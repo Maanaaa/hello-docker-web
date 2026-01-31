@@ -1,0 +1,8 @@
+# Use the officiel Apache image based on Alpine Linux
+FROM httpd:alpine
+
+# Copy the source code from the 'app' directory to the Apache root
+COPY ./app/ usr/local/apache2/htdocs/
+
+# Port 80 is the default port for HTTP traffic
+EXPOSE 80
