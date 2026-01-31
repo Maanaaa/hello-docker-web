@@ -57,11 +57,6 @@ Once your configuration is set, use the following commands to manage your projec
 4.  **Run**: Execute `docker compose up -d`.
 5.  **View Website**: Open **[http://localhost:8080](http://localhost:8080)**.
 6.  **View Database**: Open **[http://localhost:8081](http://localhost:8081)** (Auto-login enabled).
-1.  **Prerequisites**: Ensure **Docker** is installed and running.
-2.  **Customization**: Edit the `.env` file to set your preferred ports, paths, and database credentials.
-3.  **Run**: Execute `docker compose up -d`.
-4.  **View Website**: Open **[http://localhost:8080](http://localhost:8080)** (or your custom `HOST_PORT`).
-5.  **View Database**: Open **[http://localhost:8081](http://localhost:8081)** for PHPMyAdmin (Auto-login enabled).
 
 ## 📂 Project Structure
 ```text
