@@ -1,9 +1,11 @@
 # Apache Docker Boilerplate
 
-A professional, production-ready web starter kit using **Apache (httpd)** and **Docker**. This project is fully automated and designed to be highly customizable via environment variables.
+A professional, production-ready web starter kit using **Apache**, **PHP**, and **MySQL**. This project is fully automated and designed to be highly customizable via environment variables.
 
 ## 🌟 Features
-- **Apache (httpd)**: Industry-standard high-performance web server.
+- **PHP 8.2 & Apache**: Industry-standard high-performance dynamic web server.
+- **MySQL 8.0**: Persistent database storage using Docker volumes.
+- **PHPMyAdmin**: Web-based interface for easy database management with auto-login enabled.
 - **Docker Compose**: One-command orchestration for building and running.
 - **Dynamic Paths**: Change your source code folder without touching the Dockerfile.
 - **Environment Driven**: Fully configurable through a simple `.env` file.
@@ -17,14 +19,18 @@ Follow these steps to customize your environment **before** launching the server
 ### Step 1: The Environment File (`.env`)
 The `.env` file acts as your control panel. You can modify the project behavior without touching the core code:
 
-* **`HOST_PORT`**: The port you will type in your browser (e.g., `8080`). Change this if another app is already using that port on your machine.
-* **`APP_PATH`**: **The local path to your website files.** By default, it points to `./app`. If you want to use a different folder for your HTML/CSS, update this path here.
-* **`CONTAINER_NAME`**: The specific name that will appear in your Docker container list.
-* **`IMAGE_NAME`**: The name used for the generated Docker image.
+* **`COMPOSE_PROJECT_NAME`**: Defines the prefix for all your project containers.
+* **`HOST_PORT`**: The port you will type in your browser (e.g., `8080`) to access your website.
+* **`APP_PATH`**: **The local path to your website files.** By default, it points to `./app`.
+* **`CONTAINER_NAME`**: The specific name that will appear in your Docker container list for the web server.
+* **`IMAGE_NAME` & `IMAGE_TAG`**: Define how your generated web image is named and versioned.
+* **`DB_ROOT_PASSWORD`**: Master password for the MySQL root user.
+* **`DB_NAME`, `DB_USER`, `DB_PASSWORD`**: Your specific database credentials.
+* **`PMA_HOST_PORT`**: The port used to access PHPMyAdmin (default: `8081`).
 
 ### Step 2: Source Code Setup
-Place your web assets (HTML, CSS, JavaScript) inside the folder defined by `APP_PATH` (default is the `/app` folder).
-* **Note**: Ensure your main file is named `index.html`, as Apache looks for this specific filename to serve your site.
+Place your web assets (PHP, HTML, CSS, JavaScript) inside the folder defined by `APP_PATH` (default is the `./app` folder).
+* **Note**: Ensure your main file is named `index.php` or `index.html`.
 
 ### Step 3: Deployment
 Once your configuration is set, use the following commands to manage your project:
@@ -43,16 +49,17 @@ Once your configuration is set, use the following commands to manage your projec
 ## 🚀 Quick Start Summary
 
 1.  **Prerequisites**: Ensure **Docker** is installed and running.
-2.  **Customization**: Edit the `.env` file to set your preferred ports and paths.
+2.  **Customization**: Edit the `.env` file to set your preferred ports, paths, and database credentials.
 3.  **Run**: Execute `docker compose up -d`.
-4.  **View**: Open **[http://localhost:8080](http://localhost:8080)** (or your custom port).
+4.  **View Website**: Open **[http://localhost:8080](http://localhost:8080)** (or your custom `HOST_PORT`).
+5.  **View Database**: Open **[http://localhost:8081](http://localhost:8081)** for PHPMyAdmin (Auto-login enabled).
 
 ## 📂 Project Structure
 ```text
 .
-├── app/                # Default directory for your web files
-├── .env                # Centralized configuration (Ports, Paths, Names)
+├── app/                # Default directory for your web files (PHP/HTML)
+├── .env                # Centralized configuration (Ports, DB credentials, Paths)
 ├── .gitignore          # Git exclusion rules
-├── docker-compose.yml  # Master orchestration file (bridges .env and Docker)
-├── Dockerfile          # Custom Apache image recipe (using build args)
+├── docker-compose.yml  # Master orchestration file
+├── Dockerfile          # Custom PHP + Apache image recipe
 └── README.md           # Documentation
