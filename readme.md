@@ -42,10 +42,13 @@ Once your configuration is set, use the following commands to manage your projec
 
 ## 🚀 Quick Start Summary
 
-1.  **Prerequisites**: Ensure **Docker** is installed and running.
-2.  **Customization**: Edit the `.env` file to set your preferred ports and paths.
+1.  **Clone this specific branch**:
+    ```bash
+    git clone -b apache-only [https://github.com/Maanaaa/hello-docker-web.git](https://github.com/Maanaaa/hello-docker-web.git) .
+    ```
+2.  **Prerequisites**: Ensure **Docker** is installed and running.
 3.  **Run**: Execute `docker compose up -d`.
-4.  **View**: Open **[http://localhost:8080](http://localhost:8080)** (or your custom port).
+4.  **View Website**: Open **[http://localhost:8080](http://localhost:8080)**.
 
 ## 📂 Project Structure
 ```text
