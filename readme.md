@@ -56,3 +56,13 @@ Once your configuration is set, use the following commands to manage your projec
 ├── docker-compose.yml  # Master orchestration file (bridges .env and Docker)
 ├── Dockerfile          # Custom Apache image recipe (using build args)
 └── README.md           # Documentation
+
+## 🛠 Useful Commands
+
+| Action | Command |
+| :--- | :--- |
+| **Start server** | `docker compose up -d` |
+| **Stop server** | `docker compose down` |
+| **Rebuild after changes** | `docker compose up -d --build` |
+| **View logs** | `docker compose logs -f` |
+| **Check status** | `docker compose ps` |
