@@ -48,6 +48,15 @@ Once your configuration is set, use the following commands to manage your projec
 
 ## 🚀 Quick Start Summary
 
+1.  **Clone this specific branch**:
+    ```bash
+    git clone -b feature/full-stack-integration [https://github.com/Maanaaa/hello-docker-web.git](https://github.com/Maanaaa/hello-docker-web.git) .
+    ```
+2.  **Prerequisites**: Ensure **Docker** is installed and running.
+3.  **Customization**: Edit the `.env` file to set your preferred ports, paths, and database credentials.
+4.  **Run**: Execute `docker compose up -d`.
+5.  **View Website**: Open **[http://localhost:8080](http://localhost:8080)**.
+6.  **View Database**: Open **[http://localhost:8081](http://localhost:8081)** (Auto-login enabled).
 1.  **Prerequisites**: Ensure **Docker** is installed and running.
 2.  **Customization**: Edit the `.env` file to set your preferred ports, paths, and database credentials.
 3.  **Run**: Execute `docker compose up -d`.
