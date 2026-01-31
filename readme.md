@@ -1,4 +1,4 @@
-# Apache Docker Boilerplate
+# Apache, SQL and PHPMyAdmin Docker Boilerplate
 
 A professional, production-ready web starter kit using **Apache**, **PHP**, and **MySQL**. This project is fully automated and designed to be highly customizable via environment variables.
 
