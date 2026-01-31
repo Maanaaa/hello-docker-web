@@ -56,6 +56,7 @@ Once your configuration is set, use the following commands to manage your projec
 ├── docker-compose.yml  # Master orchestration file (bridges .env and Docker)
 ├── Dockerfile          # Custom Apache image recipe (using build args)
 └── README.md           # Documentation
+```
 
 ## 🛠 Useful Commands
 
