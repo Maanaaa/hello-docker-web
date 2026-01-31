@@ -63,3 +63,15 @@ Once your configuration is set, use the following commands to manage your projec
 ├── docker-compose.yml  # Master orchestration file
 ├── Dockerfile          # Custom PHP + Apache image recipe
 └── README.md           # Documentation
+
+## 🛠 Useful Commands
+
+| Action | Command |
+| :--- | :--- |
+| **Start all services** | `docker compose up -d` |
+| **Stop & Remove containers** | `docker compose down` |
+| **Rebuild & Refresh stack** | `docker compose up -d --build` |
+| **Check live logs** | `docker compose logs -f` |
+| **Check container status** | `docker compose ps` |
+| **Reset Database** (Warning: Wipes all data) | `docker compose down -v` |
+| **Access MySQL container** | `docker exec -it hello_docker_web_db bash` |
